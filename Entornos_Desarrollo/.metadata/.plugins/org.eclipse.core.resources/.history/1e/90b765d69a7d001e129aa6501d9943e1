@@ -1,0 +1,38 @@
+package cajablanca;
+
+import java.util.Scanner;
+
+public class Cajablanca {
+
+	// Número entero aleatorio del 0 al 199, math.ramdom eleige un número del 0.0
+	// al 1.0
+	private static int numeroAleatorio(int b) {
+		return (int) (Math.random() * b - 1);
+	}
+	// Texto "Adivina el número del 1 al ... "
+	public static void adivinaTexto() {
+		System.out.println("Adivina el número del 1 al ... ");
+	}
+
+	public static void main(String[] args) {
+		adivinaTexto();
+
+		Scanner teclado = new Scanner(System.in);
+		
+		//Varable entera que se utiliza para el número aleatorio
+		int numRandom = numeroAleatorio(200);
+		int entrada = teclado.nextInt();
+		System.out.println(numRandom);
+		//Comprobación para saber si acertaste o fallaste
+		numRandom = numeroAleatorio(numRandom);
+		if (entrada==numRandom) {
+			System.out.println("Acertaste");
+		}else {
+			System.out.println("Fallaste");
+		}
+		
+
+		
+		teclado.close();
+	}
+}

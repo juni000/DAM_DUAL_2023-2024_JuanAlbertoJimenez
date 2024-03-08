@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Formularios</title>
+    <style >
+      button{
+        background-color: #ACAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      fieldset {
+        border: 1px solid #5C331A;
+        border-top: 20px solid #5C331A;
+        border-bottom: 10px solid #5C331A;
+        background: #faf3e6;
+      }
+
+      fieldset legend {
+        font-weight: bold; 
+        text-transform: capitalize;
+        font-variant: small-caps;
+        background: #5C331A;
+        color: #fff;
+        position: relative;
+        top: -9px;
+        left: 0px;
+        padding: 5px 20px;
+        font-size: 24px;
+        border-radius: 8px 8px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>EJEMPLO DE FORMULARIO</h1>
+      <h2>SUSCRÍBETE AL BOLETÍN</h2>
+      <form action="enviar.php" method="POST">
+        <fieldset>
+          <legend>Información personal</legend>
+          
+          <label>Escribe tu nombre:</label><br>
+          <input type="text" id="nombre" name="nombre"><br>
+
+          <label>Escribe tus apellidos:</label><br>
+          <input type="text" id="apellidos" name="apellidos"><br>
+
+          <label>DNI:</label><br>
+          <input type="text" pattern="[0-9]{8}[A-Za-z]{1}" placeholder="Números y letra" id="DNI" name="DNI"><br>
+          <br>
+          <label>Selecciona tu provincia</label><br>
+          <select name="provincia">
+            <optgroup label="Cantabria">
+              <option value="San">Santander</option>
+            </optgroup>
+            <optgroup label="Comunidad de Madrid">
+              <option value="mad">Madrid</option>
+            </optgroup>
+            <optgroup label="Euskadi">
+              <option value="ala">Alava</option>
+              <option value="biz">Bizkaia</option>
+              <option value="guip">Guipuzkoa</option>
+            </optgroup>
+            <optgroup label="Galicia">
+              <option value="cor">A Coruña</option>
+              <option value="lug">Lugo</option>
+              <option value="ore">Guipuzkua</option>
+              <option value="pon">Pontevedra</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Interés en la revista</legend>
+          <label>Suscripción</label><br>
+          <input type="radio" name="mensual" id="mensual" value="mensual">
+          <label>Mensual</label>
+          <input type="radio" name="anual" id="anual" value="anual" checked>
+          <label>Anual</label><br>
+          <label>¿Donde nos conociste?</label><br>
+          <textarea rows="5" cols="50" name="texto"></textarea>
+
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <br>
+      <div>
+        <p>Práctica EJE 13 de 1º DAM DUAL</p>
+      </div>
+      <br>
+    </footer>
+  </body>
+ 
+ </html>

@@ -1,0 +1,21 @@
+footer {
+  background-color:blue;
+}
+h1, h2{
+  color:blue;
+}
+h3 {
+  color:red;
+}
+ul {
+  color:orange;
+}
+a {
+  background-color: yellow;
+}
+.colorBlanco{
+  color:white;
+}
+.fondoBlanco {
+  background-color: white;
+}

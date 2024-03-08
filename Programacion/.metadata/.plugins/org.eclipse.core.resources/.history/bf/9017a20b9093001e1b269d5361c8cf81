@@ -1,0 +1,74 @@
+package arraysImparesPares;
+
+import java.util.Scanner;
+
+public class ArraysImparesPares {
+	public static int numAleatorio(int min, int max) {
+		return (int) (Math.random() * (max - min) + min);
+	}
+
+	public static boolean espar(int n) {
+		if (n % 2 == 0) {
+			return true;
+		} else
+			return false;
+	}
+
+	public static void rellenarArray(int[] lista, boolean par) {
+		int n = numAleatorio(5, 50);
+		for (int i = 0; i < lista.length; i++) {
+			if (espar(n) == par) {
+				lista[i] = n;
+				n = numAleatorio(5, 50);
+			} else {
+				i--;
+				n = numAleatorio(5, 50);
+			}
+		}
+	}
+
+	public static void mostrarArray(int[] lista) {
+		System.out.print("{");
+		for (int i = 0; i < lista.length; i++) {
+			System.out.print(lista[i] + " ");
+		}
+		System.out.print("}");
+	}
+	public static int numeroMayor(int[] lista) {
+		int n = 0;
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] > n) {
+				n = lista[i];
+			}
+		}
+		return n;
+	}
+	public static int numeroMenor(int[] lista) {
+		int n = 99999;
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] < n) {
+				n = lista[i];
+			}
+		}
+		return n;
+	}
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		int tamano = 0;
+		boolean par = true, impar = false;
+		System.out.println("Introduzca el tamaño del array: ");
+		tamano = teclado.nextInt();
+		int[] listaImpar = new int[tamano];
+		System.out.println("Array de impares: ");
+		rellenarArray(listaImpar, impar);
+		mostrarArray(listaImpar);
+		System.out.println("\nTamaño del Array de pares: " + numeroMenor(listaImpar));
+		int[] listaPar = new int[numeroMenor(listaImpar)];
+		System.out.println("Array de pares: ");
+		rellenarArray(listaPar, par);
+		mostrarArray(listaPar);
+		teclado.close();
+	}
+
+}

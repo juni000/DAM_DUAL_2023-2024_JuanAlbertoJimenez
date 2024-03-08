@@ -1,0 +1,63 @@
+<!-- Juan Alberto Jimenez Arenas -->
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web VIAJES RECOMENDADOS</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
+	</head>
+	<body>
+		<header>
+			<h1>VIAJES ÁFRICA</h1>
+			<nav>
+				<ul>
+				    <li><a href="#agenciaViajes">AGENCIA</a></li>
+				    <li><a href="#nuevosViajes">SUBSCRICIÓN</a></li>
+				    <li><a href="capitulos/viajes.html">VIAJES MÁS SOLICITADOS</a></li>
+				</ul>
+  			</nav>
+		</header>
+		<main>
+			<section id="agenciaViajes">
+				<h2>AGENCIA DE VIAJES</h2>
+				<img class="imgAgenciaViajes" src="static/imagenes/viajeAfrica.jpeg">
+				<p>Cuando diseñamos viajes a medida por África, pensamos en ti, en vosotros, en vuestras ideas y gustos, necesidades y situaciones, estamos atentos a escucharte y también a hacerte propuestas. El viaje a medida es un éxito asegurado: Sudáfrica, Kenia, Tanzania, Etiopía, Namibia, Madagascar….</p>
+				<p><strong>¿A qué destino de África quieres viajar?</strong></p>
+				<p class="agenciaViajesParrafo">El equipo de la Agencia de Viajes, está a tu disposición. Siempre trabajando con receptivos valorados por su profesionalidad, atención esmerada al viajero e involucración responsable con su sociedad y medio-ambiente.  Un viaje único, un viaje a tu media.</p>
+			</section>
+			<section id="nuevosViajes">
+				<h2>ENTÉRATE DE NUEVOS VIAJES</h2>
+				<form>
+					<label>Entérate de nuestros nuevos viajes, recomendaciones expertas, curiosidades culturales, y más, con nuestras newsletters. Regístrate, es muy fácil.</label>
+					<fieldset>
+						<legend>Información personal</legend>
+						<label>Escribe tu nombre</label>
+						<input type="text" id="nombre" name="nombre">
+						<label for="nombre">Escribe tus apellidos:</label>
+      	 				<input type="text" id="apellidos" name="apellidos">
+					</fieldset>
+					<fieldset>
+						<legend>Tipo de suscripción</legend>
+						<input type="radio" id="radio" class="radioSuscripcion" name="anual" value="anual">
+				        <label for="nombre" class="radioSuscripcion">Anual</label>
+				        <input type="radio" class="radioSuscripcion" id="cuatrimestral" name="cuatrimestral" value="cuatrimestral">
+						<label for="nombre" class="radioSuscripcion">Cuatrimestral</label>
+						<input type="radio" id="mensual" name="mensual" value="mensual" class="radioSuscripcion">
+						<label for="nombre" class="radioSuscripcion">Mensual</label>
+						<input type="radio" id="semanal" name="semanal" value="semanal" class="radioSuscripcion">
+						<label for="nombre" class="radioSuscripcion">Semanal</label>
+				      	<label>Déjanos tu comentario</label>
+				      	<textarea rows="5" cols="50" name="texto" class="radioSuscripcion">
+				      	</textarea>
+					</fieldset>
+					<input type="submit" id="suscripción" value="Suscribete">
+				</form>
+			</section>
+		</main>
+		<footer>
+			<div>
+				<p>VISITA OTROS DESTINOS: Viajes a todos los destinos posibles.</p>
+			</div>
+		</footer>
+	</body>
+</html>

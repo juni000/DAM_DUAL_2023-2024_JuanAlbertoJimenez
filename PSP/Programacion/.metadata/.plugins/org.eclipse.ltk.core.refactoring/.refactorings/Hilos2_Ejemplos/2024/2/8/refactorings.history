@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;sincronizacion.ResursoJardin&apos; to &apos;RescursoJardin&apos;&#x0D;&#x0A;- Original project: &apos;Hilos2_Ejemplos&apos;&#x0D;&#x0A;- Original element: &apos;sincronizacion.ResursoJardin&apos;&#x0D;&#x0A;- Renamed element: &apos;sincronizacion.RescursoJardin&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ResursoJardin&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;sincronizacion{ResursoJardin.java[ResursoJardin" matchStrategy="1" name="RescursoJardin" qualified="false" references="true" similarDeclarations="false" stamp="1708460007680" textual="false" version="1.0"/>
+</session>

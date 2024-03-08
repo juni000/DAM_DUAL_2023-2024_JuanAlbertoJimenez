@@ -1,0 +1,10 @@
+package clase_4_File.In.Out.Stream;
+
+public class Clase_4_FileInputStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

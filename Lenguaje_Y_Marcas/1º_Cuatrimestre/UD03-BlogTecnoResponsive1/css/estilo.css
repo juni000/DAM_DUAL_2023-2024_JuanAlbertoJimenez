@@ -1,0 +1,168 @@
+/* Luisana Rodríguez Castellanos */
+/* Hoja de estilos CSS: ESTRATEGIA MOBILE FIRST*/
+    body {
+      background-image : url(../static/imagenes/fondo.jpg);
+      font-family: "Consolas","Open Sans", "Arial", "Helvetica", sans-serif;
+      margin:0;
+      color: #0fff26;
+    }
+    h1 {
+      margin-top:0px;
+      margin-bottom:0px;
+      letter-spacing: -2px;
+      margin-left: 10px;
+      padding-left: 50px;
+      background: transparent url(../static/imagenes/logoVerde.png) no-repeat left center;
+      font-size: 35px;   
+    }
+    ul{
+      margin-top:0px;
+      margin-left:30px;
+    }
+    li {
+      display: inline;
+      padding-right: 10%;
+    }
+    a{
+      color:#0fff26;
+    }
+    h2 {
+      text-align:center;
+      text-shadow: rgb(19, 17, 17) 2px 2px;
+      margin-bottom: 8px;
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+    img {
+      margin: 6px 6px;
+      padding:6px;
+      background-color: #0fff26;
+      width: 15%;
+    }
+    form {
+      background-color: white;
+      margin:10px;
+      padding:20px;
+      border: solid 4px black;
+      color:black;
+    }
+    legend {
+      font-size: 2em;
+      text-shadow: #00000023 3px 3px;
+      }
+    fieldset {
+      width: auto;
+      float: left;
+    }
+    input, label{
+      display: block;
+    }
+    .adaptable{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #enviar {
+      clear :both;
+      font-size: 20px;
+      width: 140px;
+      height: 50px;
+      color: white;
+      background-color: green;
+      border-radius: 11px;
+    }
+    img.info {
+      width: 10%;
+      float:left;
+    }
+    p.infoparrafo{
+      clear: both;
+      margin-left: 2%;
+    }
+    footer {
+      padding:30px;
+      margin-top:50px;
+      background-color: #0fff26;
+      border-top: solid 4px black;
+      color:black;
+    }
+    .inicio {
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-weight: bold;
+      /* Hay que definir la propiedad color en la clase .inicio porque aunque también
+      herede el color del contenedor footer, de quien realmente hereda que macahaca
+      el anterior, es de contenedor a */
+      color:black;
+    }
+
+
+/* TABLETS */
+@media (min-width: 768px) {
+ body {
+  color: #ffff13;
+ }
+ h1 {
+      margin-left: 20px;
+      padding-left: 60px;
+      background: transparent url(../static/imagenes/logoAmarillo.png) no-repeat left center;
+      font-size: 50px;   
+    }
+ h2 {
+    text-shadow: rgb(19, 17, 17) 2px 2px;
+    margin-bottom: 8px;
+    font-size: 40px;
+    letter-spacing: 10px;
+ }
+ ul{
+      margin-left:50px;
+    }
+  a{
+      color:#ffff13;
+  }
+ img {
+      margin: 8px;
+      padding:8px;
+      background-color: #ffff13;
+      width: 19%;
+    }
+footer {
+      background-color: #ffff13;
+  }  
+}
+
+/* ESCRITORIO */
+@media (min-width: 992px) {
+ body {
+  color: white;
+ }
+ h1 {
+      margin-left: 30px;
+      padding-left: 70px;
+      background: transparent url(../static/imagenes/logoBlanco.png) no-repeat left center;
+      font-size: 60px;   
+    }
+ h2 {
+      text-shadow: rgb(19, 17, 17) 3px 3px;
+      font-size: 50px;
+      letter-spacing: 16px;
+    }
+ ul{
+      margin-left:70px;
+    }
+ a{
+      color:white;
+  } 
+ img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left:10px;
+      margin-right:10px;
+      padding:10px;
+      background-color: white;
+      width: 19%;
+  }
+  footer {
+      background-color: white;
+  }  
+}

@@ -1,0 +1,91 @@
+package arraysImparesPares;
+
+import java.util.Scanner;
+
+public class ArraysImparesPares {
+	public static int numAleatorio(int min, int max) {
+		return (int) (Math.random() * (max - min) + min);
+	}
+
+	public static boolean espar(int n) {
+		if (n % 2 == 0) {
+			return true;
+		} else
+			return false;
+	}
+
+	public static void rellenarArray(int[] lista, int min, int max, boolean par) {
+		int n = numAleatorio(min, max);
+		for (int i = 0; i < lista.length; i++) {
+			if (espar(n) == par) {
+				lista[i] = n;
+				n = numAleatorio(min, max);
+			} else {
+				i--;
+				n = numAleatorio(min, max);
+			}
+		}
+	}
+
+	public static void mostrarArray(int[] lista) {
+		System.out.print("{");
+		for (int i = 0; i < lista.length; i++) {
+			System.out.print(lista[i] + " ");
+		}
+		System.out.print("}\n");
+	}
+
+	public static int numeroMayor(int[] lista) {
+		int n = 0;
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] > n) {
+				n = lista[i];
+			}
+		}
+		return n;
+	}
+
+	public static int numeroMenor(int[] lista) {
+		int n = 99999;
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] < n) {
+				n = lista[i];
+			}
+		}
+		return n;
+	}
+
+	public static int maximoComunDivisor(int a, int b) {
+		int temporal;
+		while (b != 0) {
+			temporal = b;
+			b = a % b;
+			a = temporal;
+		}
+		return a;
+	}
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		int tamano = 0;
+		boolean par = true, impar = false;
+		
+		System.out.println("Introduzca el tamaño del array: ");
+		tamano = teclado.nextInt();
+		int[] listaImpar = new int[tamano];
+		
+		System.out.println("Array de impares: ");
+		rellenarArray(listaImpar, 5, 50, impar);
+		mostrarArray(listaImpar);
+		
+		System.out.println("\nTamaño del Array de pares: " + numeroMenor(listaImpar));
+		int[] listaPar = new int[numeroMenor(listaImpar)];
+		
+		System.out.println("Array de pares: ");
+		rellenarArray(listaPar, 1, numeroMenor(listaImpar), par);
+		mostrarArray(listaPar);
+		System.out.println("Máximo comun divisor: " + maximoComunDivisor(numeroMayor(listaPar),numeroMenor(listaImpar)));
+		teclado.close();
+	}
+
+}

@@ -1,0 +1,21 @@
+package uRLConnection;
+
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Date;
+
+public class Ejer4 {
+
+	public static void main(String[] args) throws IOException {
+		String cadena;
+		URL url = new URL("https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html");
+		URLConnection conexion = url.openConnection();
+		System.out.println("Direccion [gerURL()]: " + conexion.getURL());
+		Date fecha = new Date(conexion.getLastModified());
+		System.out.println("Fecha última modificacion [getLastModified()]: " + fecha);
+		System.out.println("tipo de contenido [getContentType()]: " + conexion.getContentType());
+		System.out.println("==============================================================");
+	}
+
+}

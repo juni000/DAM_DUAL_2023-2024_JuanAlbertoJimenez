@@ -1,0 +1,63 @@
+body{
+	background-image: url(../static/imagenes/fondo.jpg);
+	font-family: "Consolas";
+	color: white;
+}
+footer {
+	background-color: white;
+	color: black;
+	padding-left:10px;
+}
+footer a{
+	color: black;
+}
+header nav{
+	margin-left: 60px;
+	font-size: smaller;
+}
+header nav a{
+	color: white;
+}
+h1 {
+	background-image: url(../static/imagenes/logoblanco.png) ;
+	background-repeat: no-repeat;
+	margin-left: 20px;
+	padding-left: 70px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 50px;
+}
+h2{
+	font-size: 40px;
+	letter-spacing: 15px;
+	text-shadow: black 3px 2px;
+	padding-left: 60px;
+	margin-bottom: 5px;
+}
+form{
+	padding-left: 15px;
+	background-color: white;
+	color: black;
+	border-style: solid;
+	border-width: 3px;
+}
+legend{
+	font-size: 25px;
+	text-shadow: grey 1px 1px;
+}
+img{
+	border-style: solid;
+	border-width: 10px;
+	margin-right: 30px;
+}
+button{
+	background-color: green;
+	border: none;
+	color: white;
+	padding: 10px 30px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+#Formulario{
+	margin-bottom: 20px;
+}

@@ -1,0 +1,10 @@
+select *  from asignatura;
+select nombre, ciclo, curso from asignatura where profesor="63254157C";
+select nombre, ciclo, curso from asignatura where profesor=(select dni from profesor where nombre="Esmeralda");
+select * from alumno where fecha_nacimiento>(select fecha_nacimiento from alumno where email="david.moreno@yahoo.es");
+select * from alumno_asignatura where nota_1Ev >= 5 and asignatura="DAM_BBDD";
+select * from alumno;
+select nombre, apellido from alumno where dni in ( select alumno from alumno_asignatura where nota_1Ev >= 5 and asignatura="DAM_BBDD");
+select * from asignatura where curso=1 and ciclo="DAM";
+select * from asignatura where curso=2 and ciclo="DAM";
+select * from asignatura where curso=2 and ciclo="DAM" and horas > all(select horas from asignatura where curso=1 );

@@ -1,0 +1,55 @@
+package main;
+
+public class Coche {
+	//Atributo privado
+	private String marca;
+	private String modelo;
+	private double kilometros;
+	private String combustible;
+	private String color;
+	private double precio;
+
+	//Constructores
+	
+	//Getters y Setters
+	public String devuelveMarca() {
+		return marca;
+	}
+	public void ponMarca(String marca) {
+		this.marca = marca;
+	}
+	public String devuelveModelo() {
+		return modelo;
+	}
+	public void ponModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public double devuelveKilometros() {
+		return kilometros;
+	}
+	public void ponKilometros(double kilometros) {
+		this.kilometros = kilometros;
+	}
+	public String devuelveCombustible() {
+		return combustible;
+	}
+	public void ponCombustible(String combustible) {
+		this.combustible = combustible;
+	}
+	public String devuelveColor() {
+		return color;
+	}
+	public void ponColor(String color) {
+		this.color = color;
+	}
+	public double devuelvePrecio() {
+		return precio;
+	}
+	public void ponPrecio(double precio) {
+		this.precio = precio;
+	}
+	//Métodos personalizados
+
+
+
+}

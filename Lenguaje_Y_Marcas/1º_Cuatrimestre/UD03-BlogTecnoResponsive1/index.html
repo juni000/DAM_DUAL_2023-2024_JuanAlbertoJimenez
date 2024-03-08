@@ -1,0 +1,93 @@
+<!-- Luisana Rodríguez Castellanos -->
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+   <meta charset="UTF-8">
+   <title>Web BlogTecno Responsive</title>
+   <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen">
+ </head>
+ <body>
+  <header id="inicio">
+  	<h1>BLOGTECNO</h1>
+  	<nav>
+  	<ul>
+      <li><a href="#tendencias">Tendencias</a></li>
+      <li><a href="#contacto">Formulario</a></li>
+      <li><a href="#info">Más info</a></li>
+    </ul>
+  	</nav>
+  </header>
+
+  <main>
+  	<section id="tendencias">
+     <h2>TENDENCIAS DEL SIGLO XXI</h2>
+     <div class="adaptable">
+       <img src="static/imagenes/tendencia1.jpg" alt="Tendencia 1" />
+       <img src="static/imagenes/tendencia2.jpg" alt="Tendencia 2" />
+       <img src="static/imagenes/tendencia3.jpg" alt="Tendencia 3" />
+       <img src="static/imagenes/tendencia4.jpg" alt="Tendencia 4" />
+     </div>
+    </section>
+    <section id="contacto">
+      <h2>SUBSCRÍBETE AL BOLETÍN</h2>
+      <form action="servicio.php" method="post">
+      	<fieldset>
+      	 <legend>Información personal</legend>	
+      	 <label for="nombre">Escribe tu nombre:</label>
+      	 <input type="text" id="nombre" name="nombre">
+      	 <label for="nombre">Escribe tus apellidos:</label>
+      	 <input type="text" id="apellidos" name="apellidos">
+      	 <label for="nombre">DNI:</label>
+      	 <input type="text" pattern="[0-9]{8}[A-Za-z]{1}" id="dni" name="dni" placeholder="Números y letra al final">
+              
+         <label for="provincia" id="provincia">Selecciona tu provincia:</label>
+         <select name="provincia"> 
+          <optgroup label="Cantabria">
+            <option value="san">Santander</option> 
+          </optgroup>
+          <optgroup label="Comunidad de Madrid">
+            <option value="mad" selected="selected">Madrid</option> 
+          </optgroup> 
+          <optgroup label="Euskadi">
+            <option value="ala">Alava</option> 
+            <option value="biz">Bizkaia </option> 
+            <option value="gui">Gipuzkoa</option>
+          </optgroup>
+          <optgroup label="Galicia">
+            <option value="cor">A Coruña</option> 
+            <option value="lug">Lugo</option> 
+            <option value="ore">Orense</option> 
+            <option value="pon">Pontevedra</option>
+          </optgroup>
+         </select>
+      	</fieldset>
+        
+      	<fieldset>
+      	 <legend>Interés en la revista</legend>	
+      	 <label for="nombre">Suscripción:</label>
+      	 <input type="radio" id="mensual" name="mensual" value="mensual">
+         <label for="nombre">Mensual</label>
+      	 <input type="radio" id="anual" name="anual" value="anual" checked>
+         <label for="nombre">Anual</label>
+         <label for="nombre">¿Donde nos conociste?</label>
+         <textarea rows="5" cols="50" name="texto"></textarea>
+      	</fieldset>
+        <input type="submit" id="enviar" value="enviar">
+        </form> 
+    </section>
+    <section id="masinfo">
+        <img class="info" src="static/imagenes/tendencia1.jpg" alt="Mas info" />
+        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
+
+        <p class="infoparrafo">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.</p>
+    </section>
+
+  </main>
+  <footer id="info">
+  	<div id="contenedorPieDePagina">
+  		<p>Práctica BLOGTECNO: Diseñar una Web y practicar con los estilos y propiedades CSS. Volver a <a href="#inicio"><span class="inicio">Inicio</span></a></p>
+  	</div>
+  </footer>
+
+ </body>
+</html>

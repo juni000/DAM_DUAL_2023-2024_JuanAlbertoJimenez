@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+package main;
+
+/**
+ * @author DAM
+ *
+ */
+public class CochesHistoricos extends Coche {
+
+	/**
+	 * @param marca
+	 * @param modelo
+	 * @param kilometros
+	 * @param combustible
+	 * @param color
+	 * @param precio
+	 */
+	public CochesHistoricos(String marca, String modelo, double kilometros, String combustible, String color,
+			double precio) {
+		super(marca, modelo, kilometros, combustible, color, precio);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * 
+	 */
+	public CochesHistoricos() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param marca
+	 * @param modelo
+	 * @param kilometros
+	 * @param precio
+	 */
+	public CochesHistoricos(String marca, String modelo, double kilometros, double precio) {
+		super(marca, modelo, kilometros, precio);
+		// TODO Auto-generated constructor stub
+	}
+
+}

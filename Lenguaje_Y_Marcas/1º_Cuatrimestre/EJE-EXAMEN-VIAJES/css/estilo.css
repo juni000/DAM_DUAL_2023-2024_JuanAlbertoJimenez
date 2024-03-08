@@ -1,0 +1,130 @@
+/* Juan Alberto Jimenez Arenas*/
+body{
+	background-color: #DDF1DB;
+	color: #0F5B07;
+}
+ul{
+  margin-top:0px;
+  margin-left:10%;
+}
+li {
+  display: inline;
+  padding-right: 10%;
+}
+nav p{
+	margin-left: 10%;
+}
+li a{
+	font-weight: bold;
+	font-size: 12px;
+}
+p{
+	color: black;
+}
+img{
+	margin: 6px 6px;
+	padding:6px;
+	width: 25%;
+	vertical-align: middle;
+}
+form {
+	background-color: white;
+	margin:10px;
+	padding:20px;
+	border: solid 4px #0F5B07;
+	color: black;
+}
+legend {
+	font-size: 2em;
+	text-shadow: #00000023 3px 3px;
+}
+fieldset {
+	border: solid 2px #0F5B07;
+	width: auto;
+	float: left;
+	margin-bottom: 10px;
+}
+input, label{
+	display: block;
+	clear: both;
+}
+#suscripción {
+	clear :both;
+	font-size: 20px;
+	width: 140px;
+	height: 50px;
+	border-radius: 10px;
+	color: white;
+	background-color: green;
+	border:none;
+}
+.radioSuscripcion {
+	display: inline-block;
+}
+img.imgAgenciaViajes{
+	width: 95%;
+}
+footer{
+	background-color: green;
+	padding: 5%;
+}
+footer p{
+	color: white;
+}
+/* TABLETS */
+
+@media (min-width: 768px) {
+	body{
+		background-color: #EAE0F7 ;
+		color: #25054E;
+		font-size: larger;
+	}
+	li a{
+		font-weight: bold;
+		font-size: 17px;
+	}
+	form{
+		border: solid 4px #25054E;
+	}
+	fieldset{
+		border: solid 2px #25054E;
+	}
+	img.imgAgenciaViajes{
+		width: 600px;
+		float: left;
+	}
+	p.agenciaViajesParrafo{
+		clear: both;
+	}
+	footer{
+		background-color: purple;
+	}
+}
+/* ESCRITORIO */
+@media (min-width: 992px) {
+	body{
+		background-color: #F7EFE5  ;
+		color: #E48106;
+	}
+	li a{
+		font-weight: bold;
+		font-size: 22px;
+	}
+	form{
+		border: solid 4px #E48106;
+	}
+	fieldset{
+		border: solid 2px #E48106;
+	}
+	img.imgAgenciaViajes{
+		width: 600px;
+		float: left;
+	}
+	p.agenciaViajesParrafo{
+		clear: both;
+	}
+	footer{
+		background-color: orange;
+	}
+
+}
