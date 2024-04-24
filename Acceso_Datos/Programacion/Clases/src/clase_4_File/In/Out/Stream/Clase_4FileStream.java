@@ -11,7 +11,7 @@ public class Clase_4FileStream {
 		FileInputStream in = new FileInputStream("1.jfif");
 		FileOutputStream out = new FileOutputStream("capi.jfif");
 		int n = 0, c;
-		
+
 		try {
 			c = in.read();
 

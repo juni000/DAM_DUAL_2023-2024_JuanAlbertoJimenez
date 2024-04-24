@@ -23,7 +23,7 @@ public class Ejemplo_FileWriter {
 		fw.write(f);
 		fw.write("\n");
 		fw.close();
-		
+
 	}
 
 }

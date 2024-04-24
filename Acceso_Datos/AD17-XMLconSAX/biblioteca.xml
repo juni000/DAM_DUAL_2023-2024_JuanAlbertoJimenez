@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<libros>
+<libro>
+      <autor>Leonardo Padura</autor>
+      <titulo>El hombre que amaba a los perros</titulo>
+      <precio monedas="euros">30</precio>
+</libro>
+<libro>
+      <autor>Gabriel García Márquez</autor>
+      <titulo>Amor en tiempos del cólera</titulo>
+      <precio monedas="euros">25</precio>
+</libro>
+<libro>
+      <autor>El laberinto</autor>
+      <titulo>Roberta Jiménez</titulo>
+      <precio monedas="euros">15</precio>
+</libro>
+    <libro>
+      <autor>Gabriel</autor>
+      <titulo>El amor en tiempos del cólera</titulo>
+      <precio monedas="euros">10</precio>
+</libro>
+</libros>

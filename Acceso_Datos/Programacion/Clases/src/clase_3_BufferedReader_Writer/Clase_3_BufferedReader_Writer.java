@@ -22,19 +22,19 @@ public class Clase_3_BufferedReader_Writer {
 		File fich = new File(nombredir);
 		if (fich.exists()) {
 			File fich2 = new File(nombreSal);
-			
+
 			FileReader fichfr = new FileReader(fich);
 			BufferedReader fichBR = new BufferedReader(fichfr);
-			
+
 			fich2.createNewFile();
-			
+
 			FileWriter fichrd = new FileWriter(fich2);
 			BufferedWriter fichBW = new BufferedWriter(fichrd);
-			
+
 			String linea;
 			char c;
-			
-			if ( (int)(c = (char) fichfr.read()) != -1) {
+
+			if ( (c = (char) fichfr.read()) != -1) {
 				fichrd.write(c);
 				while ((linea = fichBR.readLine()) != null) {
 					fichBW.write(linea);

@@ -1,9 +1,0 @@
-package Clase_4;
-
-public class Clase_5_FileOutPutStream {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

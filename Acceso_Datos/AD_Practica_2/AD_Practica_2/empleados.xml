@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<taller>
+<empleado>
+      <nombre>Rafael Pérez</nombre>
+      <puesto>Chapistería</puesto>
+      <antiguedad>5</antiguedad>
+</empleado>
+<empleado>
+      <nombre>Laura Sosa</nombre>
+      <puesto>Pintura</puesto>
+      <antiguedad>10</antiguedad>
+</empleado>
+<empleado>
+      <nombre>Cristina Ruiz</nombre>
+      <puesto>Electricista</puesto>
+      <antiguedad>8</antiguedad>
+</empleado>
+<empleado>
+      <nombre>Roberto Rodríguez</nombre>
+      <puesto>Mecánico</puesto>
+      <antiguedad>6</antiguedad>
+</empleado>
+<empleado>
+      <nombre>Juan Alberto</nombre>
+      <puesto>Pintura</puesto>
+      <antiguedad>1</antiguedad>
+</empleado>
+<empleado>
+      <nombre>Roberto Rodríguez</nombre>
+      <puesto>Mecánico</puesto>
+      <antiguedad>6</antiguedad>
+</empleado>
+<empleado>
+      <nombre>Roberto Rodríguez</nombre>
+      <puesto>Mecánico</puesto>
+      <antiguedad>6</antiguedad>
+</empleado>
+</taller>

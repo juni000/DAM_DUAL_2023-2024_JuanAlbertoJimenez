@@ -31,8 +31,9 @@ public class Clase_4_FileOutPutStream {
 				}
 			}
 			fichBinarioIn.close();
-		} else
+		} else {
 			System.out.println("Fichero no creado");
+		}
 
 	}
 

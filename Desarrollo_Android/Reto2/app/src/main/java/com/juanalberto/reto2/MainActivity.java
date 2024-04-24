@@ -27,29 +27,35 @@ public class MainActivity extends AppCompatActivity {
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    double numcomensales = Double.parseDouble(comensales.getText().toString());
+                try {
+                    double numcomensales = Integer.parseInt(comensales.getText().toString());
                     double importenum = Double.parseDouble(importe.getText().toString());
-                if (numcomensales > 0 && importenum > 0) {
-                    //Creamos el intent
-                    Intent intent = new Intent(MainActivity.this, PantallaResultado.class);
 
-                    //Creamos la informacion que se pasara entre pantallas
-                    Bundle bundle = new Bundle();
-                    bundle.putString("Comensales", comensales.getText() + "");
-                    bundle.putString("Importe", importe.getText() + "");
-                    //añadimos la informacion al intent
-                    intent.putExtras(bundle);
+                    if (numcomensales > 0 && importenum > 0) {
+                        //Creamos el intent
+                        Intent intent = new Intent(MainActivity.this, PantallaResultado.class);
 
-                    //Iniciamos la nueva actividad
-                    startActivity(intent);
-                }else {
-                    if (numcomensales <= 0) {
-                        comensales.setText("Número erroneo");
+                        //Creamos la informacion que se pasara entre pantallas
+                        Bundle bundle = new Bundle();
+                        bundle.putString("Comensales", comensales.getText() + "");
+                        bundle.putString("Importe", importe.getText() + "");
+                        //añadimos la informacion al intent
+                        intent.putExtras(bundle);
+
+                        //Iniciamos la nueva actividad
+                        startActivity(intent);
+                    }else {
+                        if (numcomensales <= 0) {
+                            comensales.setText("Número erroneo");
+                        }
+                        if (importenum <= 0 ) {
+                            importe.setText("Número erroneo");
+                        }
                     }
-                    if (importenum <= 0 ) {
-                    importe.setText("Número erroneo");
-                    }
-                 }
+                }catch (NumberFormatException e){
+                    comensales.setText("Introduce un valor");
+                    importe.setText("Introduce un valor");
+                }
 
             }
         });
@@ -58,14 +64,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 comensales.setText(null);
-                return false;
+                return true;
             }
         });
         importe.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 importe.setText(null);
-                return false;
+                return true;
             }
         });
         limpiar.setOnClickListener(new View.OnClickListener() {
