@@ -13,12 +13,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#9E1E1E"
-        android:text="Update Book"
+        android:text="Actualizar ejercicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPages"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPeso"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#309C9C"
-        android:text="Delete Book"
+        android:text="Eliminar ejercicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +35,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTitle"
+        android:id="@+id/editTextEjercicio"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Title"
+        android:text="Ejercicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -49,31 +49,31 @@
         app:layout_constraintVertical_bias="0.092" />
 
     <EditText
-        android:id="@+id/editTextAuthor"
+        android:id="@+id/editTextDescripcion"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Author"
+        android:text="Descripcion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEjercicio"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextPages"
+        android:id="@+id/editTextPeso"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Pages"
+        android:text="Peso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescripcion"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

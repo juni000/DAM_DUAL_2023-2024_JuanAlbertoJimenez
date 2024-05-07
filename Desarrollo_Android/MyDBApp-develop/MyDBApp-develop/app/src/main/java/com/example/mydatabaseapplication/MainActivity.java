@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -40,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(MainActivity.this);
 
         //Getting all the books
-        ArrayList<Book> allBooks = dbHelper.getBooks();
+        ArrayList<Ejercicio> allEjercicios = dbHelper.getEjercicio();
 
         recyclerView = findViewById(R.id.recyclerView);
-        customAdapter = new CustomAdapter(MainActivity.this,allBooks);
+        customAdapter = new CustomAdapter(MainActivity.this, allEjercicios);
 
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));

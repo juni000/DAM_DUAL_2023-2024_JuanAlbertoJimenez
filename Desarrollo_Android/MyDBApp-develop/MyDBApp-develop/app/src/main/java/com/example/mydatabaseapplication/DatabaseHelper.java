@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private Context myContext;
-    private static final String DATABASE_NAME = "MyLibrary.db";
-    private static final String TABLE_NAME = "Books";
+    private static final String DATABASE_NAME = "MyListaEjercicios.db";
+    private static final String TABLE_NAME = "Ejercicios";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -26,9 +26,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String query = "CREATE TABLE " + TABLE_NAME +
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                "title TEXT NOT NULL,"+
-                "author TEXT NOT NULL,"+
-                "pages INTEGER)";
+                "nombre TEXT NOT NULL,"+
+                "descripcion TEXT NOT NULL,"+
+                "peso INTEGER)";
         sqLiteDatabase.execSQL(query);
     }
 
@@ -40,17 +40,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //CREATE
-    public void createBook(Book book){
+    public void createBook(Ejercicio ejercicio){
         //Obtain book values
-        String titleNewBook = book.get_title();
-        String authorNewBook = book.get_author();
-        int pagesNewBook = book.get_pages();
+        String nombreNewEjercicio = ejercicio.get_nombre();
+        String descripcionNewEjercicio = ejercicio.get_descripcion();
+        int PesoNewEjercicio = ejercicio.get_peso();
 
         //Generate contentvalues to insert data
         ContentValues contentValues = new ContentValues();
-        contentValues.put("title",titleNewBook);
-        contentValues.put("pages",pagesNewBook);
-        contentValues.put("author",authorNewBook);
+        contentValues.put("nombre",nombreNewEjercicio);
+        contentValues.put("descripcion",descripcionNewEjercicio);
+        contentValues.put("peso",PesoNewEjercicio);
 
         //Access to the DB in write mode
         SQLiteDatabase database = this.getWritableDatabase();
@@ -60,48 +60,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             long result = database.insert(TABLE_NAME,null,contentValues);
             if(result != -1){
                 //OK
-                Toast.makeText(myContext,"Book inserted was success!",Toast.LENGTH_LONG).show();
+                Toast.makeText(myContext,"Ejercicio insertado!",Toast.LENGTH_LONG).show();
             }
             else{
                 //BAD
-                Toast.makeText(myContext,"Error while inserting the book",Toast.LENGTH_LONG).show();
+                Toast.makeText(myContext,"Error insertando el ejercicio",Toast.LENGTH_LONG).show();
             }
         }
         catch (Exception ex){
             //Exception
-            Toast.makeText(myContext,"Error while inserting the book" + ex.toString(),Toast.LENGTH_LONG).show();
+            Toast.makeText(myContext,"Error insertando el ejercicio" + ex.toString(),Toast.LENGTH_LONG).show();
         }
     }
 
     //READ
-    public ArrayList<Book> getBooks(){
-        ArrayList<Book> allBooks = new ArrayList<Book>();
+    public ArrayList<Ejercicio> getEjercicio(){
+        ArrayList<Ejercicio> allEjercicios = new ArrayList<Ejercicio>();
         //Query for obtaining all the books
-        String query = "SELECT id, title, author, pages FROM " + TABLE_NAME;
+        String query = "SELECT id, nombre, descripcion, peso FROM " + TABLE_NAME;
         //Access the database in readable mode
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor result = database.rawQuery(query,null);
 
         while(result.moveToNext()){
-            allBooks.add(new Book(result.getInt(0),
+            allEjercicios.add(new Ejercicio(result.getInt(0),
                             result.getString(1),
                             result.getString(2),
                             result.getInt(3)));
         }
         result.close();
-        return  allBooks;
+        return allEjercicios;
     }
 
     public void deleteBook(String idtext) {
         SQLiteDatabase database = this.getWritableDatabase();
         int result = database.delete(TABLE_NAME,"id = ?",new String[]{idtext});
-        if (result != 0 ) Toast.makeText(myContext,"Book deleted",Toast.LENGTH_LONG).show();
-        else Toast.makeText(myContext,"Error deleting book",Toast.LENGTH_LONG).show();
+        if (result != 0 ) Toast.makeText(myContext,"Ejercicio Eliminado",Toast.LENGTH_LONG).show();
+        else Toast.makeText(myContext,"Error Eliminando el ejercicio",Toast.LENGTH_LONG).show();
 
     }
 
-    //UPDATE
+    public void updateBook(String newEjercicio, String newDescripcion, int newPeso, String id) {
+        SQLiteDatabase database = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
 
-    //DELETE
+        contentValues.put("nombre",newEjercicio);
+        contentValues.put("descripcion",newDescripcion);
+        contentValues.put("peso",newPeso);
+
+        int updateResult = database.update(TABLE_NAME,contentValues,"id = ?",new String[]{id});
+        if (updateResult==-1){
+            Toast.makeText(myContext,"Error actualizando el ejercicio",Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(myContext,"ejercicio actualizado",Toast.LENGTH_LONG).show();
+        }
+    }
 
 }

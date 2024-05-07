@@ -7,27 +7,29 @@
     tools:context=".AddDataActivity">
 
     <EditText
-        android:id="@+id/autorText"
+        android:id="@+id/descripcionText"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Autor"
+        android:maxLength="40"
+        android:text="Descripcion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloText"
+        app:layout_constraintTop_toBottomOf="@+id/ejercicioText"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/tituloText"
+        android:id="@+id/ejercicioText"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Titulo"
+        android:maxLength="40"
+        android:text="Nombre del ejercicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -36,18 +38,19 @@
         app:layout_constraintVertical_bias="0.126" />
 
     <EditText
-        android:id="@+id/paginasText"
+        android:id="@+id/pesoText"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Paginas"
+        android:maxLength="10"
+        android:text="Peso (kg)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autorText"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionText"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -55,7 +58,7 @@
         android:layout_width="312dp"
         android:layout_height="44dp"
         android:gravity="center"
-        android:text="Inserte los datos del libro"
+        android:text="Inserte el ejercicio"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,12 +72,12 @@
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_marginTop="64dp"
-        android:text="Agregar Libro"
+        android:text="Agregar ejercicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paginasText"
+        app:layout_constraintTop_toBottomOf="@+id/pesoText"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

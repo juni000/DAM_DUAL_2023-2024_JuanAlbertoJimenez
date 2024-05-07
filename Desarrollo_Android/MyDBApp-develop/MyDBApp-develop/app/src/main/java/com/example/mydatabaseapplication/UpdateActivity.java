@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class UpdateActivity extends AppCompatActivity {
-    EditText titleField;
-    EditText authorField;
-    EditText pagesField;
+    EditText ejercicioField;
+    EditText descripcionField;
+    EditText pesoField;
     Button delete;
     Button update;
 
@@ -30,27 +29,31 @@ public class UpdateActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        titleField = findViewById(R.id.editTextTitle);
-        authorField = findViewById(R.id.editTextAuthor);
-        pagesField = findViewById(R.id.editTextPages);
+        ejercicioField = findViewById(R.id.editTextEjercicio);
+        descripcionField = findViewById(R.id.editTextDescripcion);
+        pesoField = findViewById(R.id.editTextPeso);
 
         update = findViewById(R.id.buttonUpdate);
         delete = findViewById(R.id.buttonDelete);
 
         //obtengo los datos del intent
         String idtext = getIntent().getStringExtra("id");
-        String authortext = getIntent().getStringExtra("author");
-        String titletext = getIntent().getStringExtra("title");
-        String pagestext = getIntent().getStringExtra("pages");
+        String descripciontext = getIntent().getStringExtra("descripcion");
+        String ejerciciotext = getIntent().getStringExtra("nombre");
+        String pesotext = getIntent().getStringExtra("peso");
 
-        titleField.setText(titletext);
-        authorField.setText(authortext);
-        pagesField.setText(pagestext);
+        ejercicioField.setText(ejerciciotext);
+        descripcionField.setText(descripciontext);
+        pesoField.setText(pesotext);
 
         myBDHelper =new DatabaseHelper(UpdateActivity.this);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String newEjercicio = ejercicioField.getText().toString().trim();
+                String newDescripcion = descripcionField.getText().toString().trim();
+                int newPeso = Integer.parseInt(pesoField.getText().toString());
+                myBDHelper.updateBook(newEjercicio, newDescripcion, newPeso , idtext);
 
             }
         });
