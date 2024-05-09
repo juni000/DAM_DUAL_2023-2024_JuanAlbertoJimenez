@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeComercial" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e16167c6-9a9f-4e0e-b8f3-0efe4d48e338">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Ventas"/>
+	<queryString language="SQL">
+		<![CDATA[select distinct c.nombre, c.apellido1, c.apellido2
+from comercial c join pedido p 
+on c.id=p.id_comercial]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comercial"/>
+	</field>
+	<field name="apellido1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellido1"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellido1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comercial"/>
+	</field>
+	<field name="apellido2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellido2"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellido2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="comercial"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="28" width="410" height="30" uuid="aa3e65f9-6175-43e9-b1f9-3d5311ed9552"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORME COMERCIAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="17" width="420" height="30" uuid="31160d49-305e-4f22-a112-c86d7f6bf35b"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[COMERCIALES QUE HAN REALIZADO VENTAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="31fbecb6-4227-4069-8920-2dd9dfedaccb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0dbeac4c-7d1a-40d0-a5ae-e7db4ec64995"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="b3915682-0851-4935-9687-d3d2599e1e1a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="deb0eaa4-8b7e-4c61-b4ce-b02c161b380d"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDO 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="227558a7-e8bf-45b7-919b-d4a9dad98233">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6c3a26a4-bb2e-4a1c-8825-76bfced54437"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDO 2]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="a6453196-92e5-45be-8f2a-af16cf2e930c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0dbeac4c-7d1a-40d0-a5ae-e7db4ec64995"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="30" uuid="cabb7d99-e1ae-46e1-b209-deb9658e38ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="deb0eaa4-8b7e-4c61-b4ce-b02c161b380d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{apellido1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="5600ec55-862f-427e-ac48-62950cda339a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6c3a26a4-bb2e-4a1c-8825-76bfced54437"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{apellido2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

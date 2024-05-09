@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\ProbandoTable.jar</jar>
+  <outfile>D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba2.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\Trayse101-Photoshop-Filetypes-Setup.ico</icon>
+  <jre>
+    <path>C:\Program Files\Java\jdk-22</path>
+    <requiresJdk>true</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>

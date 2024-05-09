@@ -1,0 +1,74 @@
+
+
+Version:	3.50
+CmdLine:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-22
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Version string: 1.022.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba.exe"
+Args length:	71/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-22
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Version string: 1.022.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba.exe"
+Args length:	71/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\.
+Requires JDK:	Yes
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-22
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-22\bin\javac.exe (OK)
+Version string: 1.022.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba.exe"
+Args length:	71/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba2.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\.
+Requires JDK:	Yes
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+JRE paths:	C:\Program Files\Java\jdk-22
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-22\bin\javac.exe (OK)
+Version string: 1.022.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\DI-Prueba2.exe"
+Args length:	72/32768 chars
+Exit code:	0

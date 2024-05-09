@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Asignaturas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78a8de82-a7bb-4093-9e92-f4f1f6077f14">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CentroEstudios"/>
+	<parameter name="CICLO" class="java.lang.String"/>
+	<parameter name="HORAS" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select a.nombre, a.ciclo, a.horas, a.curso, p.nombre, p.apellido
+from asignatura a join profesor p
+on a.profesor=p.dni
+where a.ciclo= $P{CICLO} and a.horas> $P{HORAS}]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asignatura"/>
+	</field>
+	<field name="ciclo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ciclo"/>
+		<property name="com.jaspersoft.studio.field.label" value="ciclo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asignatura"/>
+	</field>
+	<field name="horas" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="horas"/>
+		<property name="com.jaspersoft.studio.field.label" value="horas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asignatura"/>
+	</field>
+	<field name="curso" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="curso"/>
+		<property name="com.jaspersoft.studio.field.label" value="curso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asignatura"/>
+	</field>
+	<field name="COLUMN_5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profesor"/>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellido"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellido"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="profesor"/>
+	</field>
+	<variable name="nombre1" class="java.lang.Integer" resetType="Group" resetGroup="Group1CICLO" calculation="Count">
+		<variableExpression><![CDATA[$F{nombre}]]></variableExpression>
+	</variable>
+	<variable name="horas1" class="java.lang.Integer" resetType="Group" resetGroup="Group1CICLO" calculation="Sum">
+		<variableExpression><![CDATA[$F{horas}]]></variableExpression>
+	</variable>
+	<variable name="nombre2" class="java.lang.Integer" resetType="Group" resetGroup="Group1CICLO" calculation="Count">
+		<variableExpression><![CDATA[$F{nombre}]]></variableExpression>
+	</variable>
+	<variable name="horas2" class="java.lang.Integer" resetType="Group" resetGroup="Group1CICLO" calculation="Sum">
+		<variableExpression><![CDATA[$F{horas}]]></variableExpression>
+	</variable>
+	<group name="Group1CICLO">
+		<groupExpression><![CDATA[$F{ciclo}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<staticText>
+					<reportElement x="0" y="0" width="100" height="30" uuid="97f410e5-5f8e-4062-9a79-e6830ed0db5d"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CICLO: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="80" y="0" width="100" height="30" uuid="1b220923-6420-4926-a593-8e636a09462e"/>
+					<textFieldExpression><![CDATA[$F{ciclo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="57">
+				<staticText>
+					<reportElement x="0" y="0" width="150" height="30" uuid="32d71225-356b-4abb-9770-9f9acb463aa5"/>
+					<textElement>
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CANTIDAD ASIGNATURAS:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="330" y="0" width="130" height="30" uuid="d99e188e-e678-46c7-b1ee-8da9965465cb"/>
+					<textElement>
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CANTIDAD HORAS:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="160" y="0" width="100" height="30" uuid="f7031573-0977-41d1-9c4d-b55c0e2ac5b1"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{nombre2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="450" y="0" width="100" height="30" uuid="54a80a3b-78a8-4e84-a733-63c0ef799358"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{horas2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="122" y="40" width="298" height="30" uuid="a2277b63-59d8-4d16-ba52-a15eb672ca24"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORME ASIGNATURAS DEL CICLO: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="40" width="100" height="30" uuid="00d800aa-e914-45bb-a9b5-ed7b4a73f0d2"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CICLO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="290" height="30" uuid="56b6b4fb-c67f-4707-b96c-2cd116c67994"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DE ASIGNATURAS CON MÁS DE ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="0" width="100" height="30" uuid="4ca481da-d7ce-492f-940d-d882117cd42b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HORAS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="0" width="100" height="30" uuid="1c7af751-9a7c-4552-b22b-c6cd50e42ac8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="628be08b-1cf0-4e43-a7e9-da6b3b3d0954">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36743bb4-d4f9-401c-880d-aed50cf3942d"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASIGNATURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="100" height="30" uuid="c9a95c42-f38e-47f8-ad7e-cb9f54224db4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec1d02c7-a479-4b2c-aa0e-bb902156ba1d"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE PROFESOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="130" height="30" uuid="15b3e375-09a4-408c-81df-abb5ba1d8016">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f1e2292-fecf-4c45-afec-3461d6a77279"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS PROFESOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="100" height="30" uuid="e5b14aab-bc49-4bcd-8118-bb8ae64dfd0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e07a966a-123f-43fa-8c2e-ce0e9c83b6e0"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="100" height="30" uuid="9794c530-3011-4fd0-833e-bcd9f1ce5fc3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbb9034f-4e93-4059-b20e-467b206f117f"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORAS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="9e1ca67b-5453-4dce-9a0f-b7264b57343f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36743bb4-d4f9-401c-880d-aed50cf3942d"/>
+				</reportElement>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="30" uuid="5a788ed7-0957-41e8-9ab5-b045f38ec184">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec1d02c7-a479-4b2c-aa0e-bb902156ba1d"/>
+				</reportElement>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COLUMN_5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="30" uuid="69628259-067d-4c81-ba6d-6367a4644c26">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6f1e2292-fecf-4c45-afec-3461d6a77279"/>
+				</reportElement>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="100" height="30" uuid="6d507b15-bcc7-4a5d-9ca4-6883f77e1a77">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e07a966a-123f-43fa-8c2e-ce0e9c83b6e0"/>
+				</reportElement>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="100" height="30" uuid="64bbd0ab-3507-499f-a178-2304f21c2662">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbb9034f-4e93-4059-b20e-467b206f117f"/>
+				</reportElement>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="68" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="38" width="100" height="30" uuid="802e27bc-cd72-4c17-a47e-7bb0fbb97785"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="38" width="100" height="30" uuid="8ba43878-b909-43f5-a97d-2b70afd19b99"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="389" splitType="Stretch"/>
+	</summary>
+</jasperReport>

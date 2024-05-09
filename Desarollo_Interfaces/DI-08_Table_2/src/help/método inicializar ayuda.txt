@@ -1,0 +1,27 @@
+    private void InicializarAyuda(){
+        try {
+            //Cargar el fichero de configuración principal de la ayuda (help_set.hs)
+            File fichConfig = new File ("src/help/help_set.hs");
+            
+            //Se genera la URL que representa la ubicación del archivo de ayuda
+            //en la estructura de archivos del sistema
+            URL urlConfig = fichConfig.toURI().toURL();
+            
+            //Generar la ayuda creando el HelpSet y el HelpBroker
+             HelpSet helpSet = new HelpSet(getClass().getClassLoader(), urlConfig);                                                                                                                                    
+
+            //Crear la instancia del HelpBroker
+            HelpBroker helpBrok = helpSet.createHelpBroker();
+            
+            // Se indica la páguna que se debe abrir si se pulsa el botón AYUDA
+            helpBrok.enableHelpOnButton(jButtonAYUDA, "aplicacion", helpSet);
+            
+            // Se indica la páguna que se debe abrir si se pulsa la tecla F1
+            helpBrok.enableHelpKey(this.getContentPane(), "ventana principal", helpSet);
+            
+            
+        } catch (MalformedURLException | HelpSetException ex) {
+            Logger.getLogger(VentanaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }
