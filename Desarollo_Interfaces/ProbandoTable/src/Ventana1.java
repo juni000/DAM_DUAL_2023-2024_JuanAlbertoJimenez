@@ -8,6 +8,7 @@ public class Ventana1 extends javax.swing.JFrame {
 
     public Ventana1() {
         initComponents();
+        this.setLocationRelativeTo(null);
         inicializarTable();
     }
 
@@ -18,6 +19,11 @@ public class Ventana1 extends javax.swing.JFrame {
          jTablaInicio.setModel(modeloTable); 
         }
 
+        private void limpiarCampos() {
+          jTextFieldNombre.setText("");
+          jTextFieldApellidos.setText("");
+          jTextFieldEdad.setText("");
+        }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -44,8 +50,18 @@ public class Ventana1 extends javax.swing.JFrame {
         jLabel3.setText("Edad: ");
 
         jButtonBORRAR.setText("BORRAR");
+        jButtonBORRAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBORRARActionPerformed(evt);
+            }
+        });
 
         jButtonFINALIZAR.setText("FINALIZAR");
+        jButtonFINALIZAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFINALIZARActionPerformed(evt);
+            }
+        });
 
         jButtonINSERTAR.setText("INSERTAR");
         jButtonINSERTAR.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +146,14 @@ public class Ventana1 extends javax.swing.JFrame {
         Object datos [] = {nom,apel,ed};
         modeloTable.addRow(datos);
     }//GEN-LAST:event_jButtonINSERTARActionPerformed
+
+    private void jButtonBORRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBORRARActionPerformed
+        this.limpiarCampos();
+    }//GEN-LAST:event_jButtonBORRARActionPerformed
+
+    private void jButtonFINALIZARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFINALIZARActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButtonFINALIZARActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

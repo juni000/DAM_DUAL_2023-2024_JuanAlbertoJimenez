@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\DI-Calculadora sencilla\dist\DI-Calculadora_sencilla.jar</jar>
+  <outfile>D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\Segunda Clase\Calculadora.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Juan_Hijo\DAM_1\Desarollo_Interfaces\Ejecutable\Segunda Clase\Papirus-Team-Papirus-Apps-Birdie.ico</icon>
+  <jre>
+    <path>C:\Program Files\Java\jdk-22</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>
