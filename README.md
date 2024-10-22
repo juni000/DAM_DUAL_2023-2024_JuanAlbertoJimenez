@@ -18,7 +18,10 @@
       alt="Juan Alberto Jiménez" height="30" width="40" /></a>
   <a href="https://instagram.com/juni_003" target="blank"><img align="center"
       src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg"
-      alt="junior_003" height="30" width="40" /></a>
+      alt="juni_003" height="30" width="40" /></a>
+  <a href="https://www.codewars.com/users/juni000" target="blank"><img align="center"
+      src="https://www.codewars.com/users/juni000/badges/small"
+      alt="juni000" /></a>
 </p>
 
 <br>
